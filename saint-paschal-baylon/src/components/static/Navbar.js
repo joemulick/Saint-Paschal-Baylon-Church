@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-
-
+import { Nav, NavItem, NavLink } from 'reactstrap';
 
 
 class Navbar extends Component {
   render() {
     return (
-      <div class="row">
+
       	<nav id="nav-color" class="navbar fixed-top navbar-toggleable-md navbar-light">
 
               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +41,7 @@ class Navbar extends Component {
                 </ul>
               </div>
 	    </nav>
-      </div>
+
     );
   }
 }
