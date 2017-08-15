@@ -8,6 +8,7 @@ class Footer extends Component {
     return (
       <div class="row">
 
+      <p>Footer</p>
 
       </div>
     );

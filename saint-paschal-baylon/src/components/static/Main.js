@@ -8,6 +8,7 @@ class Main extends Component {
     return (
       <div class="row">
 
+      <p>Main</p>
 
       </div>
     );
