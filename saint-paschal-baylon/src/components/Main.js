@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 
 
 
-class Footer extends Component {
+class Main extends Component {
   render() {
     return (
       <div class="row">
 
-      <p>Footer</p>
+      <p>Main</p>
 
       </div>
     );
   }
 }
 
-export default Footer;
+export default Main;
