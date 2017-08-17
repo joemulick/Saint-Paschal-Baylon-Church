@@ -4,6 +4,7 @@ import './stylesheets/base/App.css';
 // import Footer from './components/static/Footer.js';
 import Main from './components/Main.js';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+/* About to start react router */
 
 
 class App extends Component {
