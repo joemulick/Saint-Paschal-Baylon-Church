@@ -8,14 +8,25 @@ import { LinkContainer } from 'react-router-bootstrap';
 import {
   BrowserRouter as Router,
   Route,
+  Link
 } from 'react-router-dom';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid} from 'react-bootstrap';
 
 /* Styling */
 
 const navBarStyle = {
 	marginBottom: '0px'
 };
+
+/* This is not currently working
+const navBrandStykle={
+	fontSize: '18px',
+    lineHeight: '20px'
+};
+/*
+
+
+
 
 /* Styling End */
 
@@ -28,9 +39,7 @@ class App extends Component {
 						<Navbar.Header>
 
 							<Navbar.Brand>
-								<LinkContainer to="/">
-							    	<a>Saint Paschal Baylon</a>
-							    </LinkContainer>
+							    	<Link to='/'>Saint Paschal Baylon</Link>
 							</Navbar.Brand>
 
 							<Navbar.Toggle />
