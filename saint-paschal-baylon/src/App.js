@@ -13,6 +13,9 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid } from 'react-bootstr
 
 /* Styling */
 
+const navBarStyle = {
+	marginBottom: '0px'
+};
 
 /* Styling End */
 
@@ -21,7 +24,7 @@ class App extends Component {
 		return (
 			<Router>
 				<div>
-					<Navbar collapseOnSelect>
+					<Navbar style={navBarStyle} collapseOnSelect>
 						<Navbar.Header>
 
 							<Navbar.Brand>
