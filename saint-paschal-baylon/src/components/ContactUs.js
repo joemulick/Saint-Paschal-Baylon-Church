@@ -2,17 +2,16 @@ import React, { Component } from 'react';
 
 
 
-
-class Main extends Component {
+class ContactUs extends Component {
   render() {
     return (
-      <div class="row">
+      <div>
 
-      <p>Main</p>
+      <p>Contact Us</p>
 
       </div>
     );
   }
 }
 
-export default Main;
+export default ContactUs;

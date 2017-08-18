@@ -1,48 +1,67 @@
 import React, { Component } from 'react';
 import './stylesheets/base/App.css';
-// import Navbar from './components/static/Navbar.js';
-// import Footer from './components/static/Footer.js';
-import Main from './components/Main.js';
+import Home from './components/Home.js';
+import BecomeCatholic from './components/BecomeCatholic.js';
+import GetInvolved from './components/GetInvolved.js';
+import ContactUs from './components/ContactUs.js';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
-/* About to start react router */
 
+/* Styling */
+
+let noStyle = {
+  textDecoration: 'none',
+};
+
+
+
+/* Styling End */
 
 class App extends Component {
 	render() {
 		return (
-			<div>
-				<Navbar collapseOnSelect>
-					<Navbar.Header>
-						<Navbar.Brand>
-						    <a href="#">Saint Paschal Baylon</a>
-						</Navbar.Brand>
+			<Router>
+				<div>
 
-						<Navbar.Toggle />
-					</Navbar.Header>
-						<Navbar.Collapse>
-						  <Nav>
-						    <NavItem eventKey={1} href="#">Link</NavItem>
-						    <NavItem eventKey={2} href="#">Link</NavItem>
+					<Navbar collapseOnSelect>
+						<Navbar.Header>
+							<Navbar.Brand>
+							    <Link to = "/">Saint Paschal Baylon</Link>
+							</Navbar.Brand>
 
-						    <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-						      <MenuItem eventKey={3.1}>Action</MenuItem>
-						      <MenuItem eventKey={3.2}>Another action</MenuItem>
-						      <MenuItem eventKey={3.3}>Something else here</MenuItem>
-						      <MenuItem divider />
-						      <MenuItem eventKey={3.3}>Separated link</MenuItem>
-						    </NavDropdown>
+							<Navbar.Toggle />
+						</Navbar.Header>
+							<Navbar.Collapse>
+							  <Nav>
+							    <NavItem eventKey={1}><Link to="/becoming-catholic" style={noStyle}>Becoming Catholic</Link></NavItem>
+							    <NavItem eventKey={2}>Mass Times</NavItem>
+							    <NavItem eventKey={3}>Upcoming Events</NavItem>
 
-						  </Nav>
-						  <Nav pullRight>
-						    <NavItem eventKey={1} href="#">Link Right</NavItem>
-						    <NavItem eventKey={2} href="#">Link Right</NavItem>
-						  </Nav>
-					</Navbar.Collapse>
-				</Navbar>
+							    <NavDropdown eventKey={3} title="Church Amenities" id="basic-nav-dropdown">
+							      <MenuItem eventKey={3.1}>Adoration Chapel</MenuItem>
+							      <MenuItem eventKey={3.2}>Confession</MenuItem>
+							      <MenuItem eventKey={3.3}>Crying Room</MenuItem>
+							    </NavDropdown>
 
-				<Main />
+							  </Nav>
+							  <Nav pullRight>
+							  	<NavItem eventKey={1}><Link to="/get-involved">Get Involved</Link></NavItem>
+							    <NavItem eventKey={2}><Link to="/contact-us">Contact Us</Link></NavItem>
+							  </Nav>
+						</Navbar.Collapse>
+					</Navbar>
 
-			</div>
+				<Route exact path="/" component={Home}/>
+		        <Route path="/becoming-catholic" component={BecomeCatholic}/>
+		        <Route path="/get-involved" component={GetInvolved}/>
+		        <Route path="/contact-us" component={ContactUs}/>
+
+				</div>
+			</Router>
 		);
 	}
 
