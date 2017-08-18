@@ -2,39 +2,47 @@ import React, { Component } from 'react';
 import Welcome from './homeInnerComponents/Welcome.js';
 import MassTimes from './homeInnerComponents/MassTimes.js';
 import Events from './homeInnerComponents/Events.js';
+import SaintOfDay from './homeInnerComponents/SaintOfDay.js'
 import CatholicNews from './homeInnerComponents/CatholicNews.js'
+import HomeImage from './homeInnerComponents/HomeImage.js'
 import { LinkContainer } from 'react-router-bootstrap';
 import {
   BrowserRouter as Router,
   Route,
 } from 'react-router-dom';
-import { Row, Col, Image } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
-const mainImageStyle = {
-  minWidth: '100%',
-  height: 'auto',
-  borderBottom: '1px solid'
-}; 
+const OuterDiv = {
+  borderStyle: 'solid',
+
+}
 
 class Home extends Component {
   render() {
     return (    	
-    	<div>
+    	<div style={OuterDiv}>
 
     	<Row className="show-grid">
-	    	<Col>
-	    		<Image style={mainImageStyle} src="https://res.cloudinary.com/ddsihrmda/image/upload/v1503029655/main-img-ed_muc2g0.jpg" responsive />
+	    	<Col md={12}>
+	    		<HomeImage />
 	    	</Col>
     	</Row>
+
     	<Row className="show-grid">
 
 	    		<Col xs={12} md={8}>
+
 	    			<Welcome />
 	    			<MassTimes />
 	    			<Events />
+
 				</Col>
-      			<Col xs={12} md={4}>
-      				<CatholicNews />
+
+      		<Col xs={12} md={4}>
+          
+            <SaintOfDay />
+      			<CatholicNews />
+
 				</Col>
     	</Row>
 

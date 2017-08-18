@@ -18,15 +18,6 @@ const navBarStyle = {
 	marginBottom: '0px'
 };
 
-/* This is not currently working
-const navBrandStykle={
-	fontSize: '18px',
-    lineHeight: '20px'
-};
-/*
-
-
-
 
 /* Styling End */
 
