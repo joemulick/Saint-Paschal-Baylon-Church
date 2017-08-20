@@ -1,9 +1,25 @@
 import React, { Component } from 'react';
 
+const MassTimesOuterContainer = {
+
+}
+
+
+
 class MassTimes extends Component {
   render() {
     return (    	
-    	<p>MassTimes</p>
+		<div style={MassTimesContainer}>
+			<div>Mass Times</div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+		</div> 
     );
   }
 }
