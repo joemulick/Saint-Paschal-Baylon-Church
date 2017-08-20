@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './stylesheets/base/App.css';
 import Home from './components/Home.js';
 import BecomeCatholic from './components/BecomeCatholic.js';
 import GetInvolved from './components/GetInvolved.js';

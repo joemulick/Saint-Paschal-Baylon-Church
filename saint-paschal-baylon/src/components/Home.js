@@ -12,15 +12,21 @@ import {
 } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 
-const OuterDiv = {
-  borderStyle: 'solid',
+const outerDiv = {
+    borderStyle: 'solid',
 
 }
+
+const hrHome = { 
+    border: '0',
+    height: '1px',
+    backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))'
+} 
 
 class Home extends Component {
   render() {
     return (    	
-    	<div style={OuterDiv}>
+    	<div style={outerDiv}>
 
     	<Row className="show-grid">
 	    	<Col md={12}>
@@ -33,7 +39,13 @@ class Home extends Component {
 	    		<Col xs={12} md={8}>
 
 	    			<Welcome />
+
+            <hr style={hrHome} />
+
 	    			<MassTimes />
+
+            <hr style={hrHome} />
+
 	    			<Events />
 
 				</Col>
