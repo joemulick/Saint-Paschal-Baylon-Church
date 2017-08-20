@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 const MassTimesOuterContainer = {
 	marginTop: '5%',
-	marginLeft: '10%'
+	marginLeft: '10%',
+	marginRight: '10%'
 }
 
 // const MassTimesRow = {
@@ -10,12 +11,13 @@ const MassTimesOuterContainer = {
 // }
 
 const MassTimesDay = {
-	maxWidth: '40%',
-	display: 'inlineBlock'
+	minWidth: '40%',
+	display: 'inline-block'
 }
 
 const MassTimesTime = {
-
+	minWidth: '60%',
+	display: 'inline-block'
 }
 
 
@@ -25,25 +27,25 @@ class MassTimes extends Component {
 		<div style={MassTimesOuterContainer}>
 			<div>Mass Times</div>
 			<div>
-				<div>Sunday</div>
-				<div>7:30am | 9:00am | 10:45am | 12:30pm (Spanish), 5:30pm</div>
+				<div style={MassTimesDay}>Sunday</div>
+				<div style={MassTimesTime}>7:30am | 9:00am | 10:45am | 12:30pm | Spanish 5:30pm</div>
 			</div>
 			<div>
-				<div>Monday - Friday</div>
-				<div>6:30 AM | 8:15 AM</div>
+				<div style={MassTimesDay}>Monday - Friday</div>
+				<div style={MassTimesTime}>6:30am | 8:15am</div>
 			</div>
 			<div>
-				<div>Saturday</div>
-				<div>8:15am | 5:30pm</div>
+				<div style={MassTimesDay}>Saturday</div>
+				<div style={MassTimesTime}>8:15am | 5:30pm</div>
 			</div>
 			<div>Confession and Holy Days</div>
 			<div>
-				<div>Confession</div>
-				<div>Saturday: 3:30 PM to 5:00 PM (Language: Spanish), 8:00 PM to 9:00 PM</div>
+				<div style={MassTimesDay}>Saturday Confession</div>
+				<div style={MassTimesTime}>3:30pm to 5:00pm | Spanish 8:00pm to 9:00pm</div>
 			</div>
 			<div>
-				<div>Holy Days</div>
-				<div>Weekdays: 6:30 AM | 8:15 AM | 12:05 PM | 7:30 PM</div>
+				<div style={MassTimesDay}>Holy Days and Religious Holidays</div>
+				<div style={MassTimesTime}>6:30am | 8:15am | 12:05pm | 7:30pm</div>
 			</div>			
 		</div> 
     );
