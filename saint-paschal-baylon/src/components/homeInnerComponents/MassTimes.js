@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
 const MassTimesOuterContainer = {
-	marginTop: '5%',
-	marginLeft: '10%',
-	marginRight: '10%'
+	margin: '10%'
 }
 
 // const MassTimesRow = {
@@ -25,7 +23,7 @@ class MassTimes extends Component {
   render() {
     return (    	
 		<div style={MassTimesOuterContainer}>
-			<div>Mass Times</div>
+			<div><h2>Mass Times</h2></div>
 			<div>
 				<div style={MassTimesDay}>Sunday</div>
 				<div style={MassTimesTime}>7:30am | 9:00am | 10:45am | 12:30pm | Spanish 5:30pm</div>
