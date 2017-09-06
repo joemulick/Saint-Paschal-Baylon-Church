@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const MassTimesOuterContainer = {
-	margin: '10%'
+	margin: '2%'
 }
 
 // const MassTimesRow = {

@@ -7,14 +7,13 @@ var expressValidator = require('express-validator');
 var session = require('express-session');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
+var passport = require('passport');
 
 var db = mongoose.connection;
 
 // Init App
 var app = express();
 
-// Morgan Logger for helping with error checking
-app.use(logger("dev"));
 
 // View Engine
 app.set('views', path.join(__dirname, 'views'));

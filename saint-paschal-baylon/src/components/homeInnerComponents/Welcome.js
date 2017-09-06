@@ -15,7 +15,7 @@ const welcomBorderStyle = {
 
 const welcomeMessageSignature = {
   float: 'right',
-  marginRight: '8%',
+  marginRight: '2%',
   display: 'inline-block',
 }
 

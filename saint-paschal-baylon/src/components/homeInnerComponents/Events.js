@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const eventsOuterContainer = {
 	borderStyle: '1px solid',
-	margin: '10%'
+	margin: '2%'
 
 }
 
