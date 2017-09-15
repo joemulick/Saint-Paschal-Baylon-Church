@@ -11,7 +11,7 @@ import {
 } from 'react-router-dom'
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid, Row, Col, Image} from 'react-bootstrap'
 
-/* Styling */
+/* Styling Save*/
 
 const navBarStyle = {
 	marginBottom: '0px'
