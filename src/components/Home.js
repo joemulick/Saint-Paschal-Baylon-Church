@@ -13,7 +13,7 @@ import { Row, Col } from 'react-bootstrap';
 
 
 const outerDiv = {
-    borderStyle: 'solid',
+    // borderStyle: 'solid',
 
 }
 

@@ -17,6 +17,11 @@ const navBarStyle = {
 	marginBottom: '0px'
 };
 
+const contactUsButton = {
+	paddingRight: '10px',
+	overflow: 'auto'
+}
+
 
 /* Styling End */
 
@@ -61,7 +66,7 @@ class App extends Component {
 							    </NavDropdown>
 							  </Nav>
 
-							  <Nav pullRight>
+							  <Nav pullRight style={contactUsButton}>
 							  	<LinkContainer to="/get-involved">
 							  		<NavItem eventKey={1}>Get Involved</NavItem>
 							  	</LinkContainer>
