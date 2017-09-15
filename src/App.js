@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import Home from './components/Home.js';
-import BecomeCatholic from './components/BecomeCatholic.js';
-import GetInvolved from './components/GetInvolved.js';
-import ContactUs from './components/ContactUs.js';
-import { LinkContainer } from 'react-router-bootstrap';
+import React, { Component } from 'react'
+import Home from './components/Home.js'
+import BecomeCatholic from './components/BecomeCatholic.js'
+import GetInvolved from './components/GetInvolved.js'
+import ContactUs from './components/ContactUs.js'
+import { LinkContainer } from 'react-router-bootstrap'
 import {
   BrowserRouter as Router,
   Route,
   Link
-} from 'react-router-dom';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid} from 'react-bootstrap';
+} from 'react-router-dom'
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid, Row, Col, Image} from 'react-bootstrap'
 
 /* Styling */
 
@@ -24,7 +24,12 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<div>
+				<Grid>
+					<Row className="show-grid">
+	    				<Col md={12}>
+	    					<Image src="https://res.cloudinary.com/ddsihrmda/image/upload/v1504563973/main-img-ed-re-one_km4hoe.jpg" responsive />
+	    				</Col>
+    				</Row>
 					<Navbar style={navBarStyle} collapseOnSelect>
 						<Navbar.Header>
 
@@ -66,7 +71,7 @@ class App extends Component {
 							  </Nav>
 						</Navbar.Collapse>
 					</Navbar>
-				<Grid>
+
 
 				<Route exact path="/" component={Home}/>
 		        <Route path="/becoming-catholic" component={BecomeCatholic}/>
@@ -74,7 +79,6 @@ class App extends Component {
 		        <Route path="/contact-us" component={ContactUs}/>
 
 		        </Grid>
-				</div>
 			</Router>
 		);
 	}

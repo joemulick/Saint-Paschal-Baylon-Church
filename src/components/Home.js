@@ -4,7 +4,6 @@ import MassTimes from './homeInnerComponents/MassTimes.js';
 import Events from './homeInnerComponents/Events.js';
 import SaintOfDay from './homeInnerComponents/SaintOfDay.js'
 import CatholicNews from './homeInnerComponents/CatholicNews.js'
-import HomeImage from './homeInnerComponents/HomeImage.js'
 import { LinkContainer } from 'react-router-bootstrap';
 import {
   BrowserRouter as Router,
@@ -26,14 +25,8 @@ const hrHome = {
 
 class Home extends Component {
   render() {
-    return (    	
+    return (
     	<div style={outerDiv}>
-
-    	<Row className="show-grid">
-	    	<Col md={12}>
-	    		<HomeImage />
-	    	</Col>
-    	</Row>
 
     	<Row className="show-grid">
 
@@ -57,9 +50,11 @@ class Home extends Component {
       			<CatholicNews />
 
 				</Col>
+
     	</Row>
 
     	</div>
+
     );
   }
 }
