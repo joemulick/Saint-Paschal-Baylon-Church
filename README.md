@@ -33,8 +33,32 @@ In node Terminal:
 
 	 > $ git clone git@github.com:joemulick/Saint-Paschal-Baylon-Church.git
 
+	 > $ cd saint-paschal-baylon-church
 
-	 >
+	 > $ npm i (or npm install (same thing))
+
+	 > $ cd client
+
+	 > $ npm i
+
+	 
+
+In order for for this application to work you need to run two seperate servers; one for the backend (server) and one for the front end (react).
+
+Go back one file directory and start the first server using:
+
+	> $ cd ..
+
+	> $ PORT=3001 node bin/www
+
+Once the first server is running, open a new bash window inside saint-paschal-baylon-church/client (client directory):
+
+	> $ npm start
+
+You're holier already!
+
+
+
 
 
 
