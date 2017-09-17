@@ -59,10 +59,6 @@ const sodTitle = {
 	marginBottom: '35px'
 }
 
-const sodBody = {
-	width: '100%'
-}
-
 const sodImage = {
 	width: '100%',
 	height: 'auto',
@@ -81,10 +77,6 @@ const stLower = {
 	maxHeight: '160px',
 	overflowY: 'scroll',
 	marginBottom: '25px'
-}
-
-const stLinkTube = {
-
 }
 
 const stLeftInnerInner = {

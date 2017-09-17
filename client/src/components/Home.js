@@ -4,11 +4,11 @@ import MassTimes from './homeInnerComponents/MassTimes.js';
 import Events from './homeInnerComponents/Events.js';
 import SaintOfDay from './homeInnerComponents/SaintOfDay.js'
 import CatholicNews from './homeInnerComponents/CatholicNews.js'
-import { LinkContainer } from 'react-router-bootstrap';
-import {
-  BrowserRouter as Router,
-  Route,
-} from 'react-router-dom';
+// import { LinkContainer } from 'react-router-bootstrap';
+// import {
+//   BrowserRouter as Router,
+//   Route,
+// } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 
 

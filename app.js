@@ -4,6 +4,32 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+// Set mongoose to leverage built in JavaScript ES6 Promises
+mongoose.Promise = Promise;
+
+/* ************* */
+/* MongoDB stuff */
+/* ************* */
+
+mongoose.connect("mongodb://localhost/SaintPaschalDevelopment");
+// Hook mongoose connection to db
+var db = mongoose.connection;
+
+// Log any mongoose errors
+db.on("error", function(error) {
+  console.log("Mongoose Error: ", error);
+});
+
+// Log a success message when we connect to our mongoDB collection with no issues
+db.once("open", function() {
+  console.log("Mongoose connection successful.");
+});
+
+/* ************* */
+/* ************* */
+/* ************* */
 
 
 var index = require('./routes/index');

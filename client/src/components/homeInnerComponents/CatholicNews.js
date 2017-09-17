@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Image } from 'react-bootstrap'
+// import { Image } from 'react-bootstrap'
 
-const outerDiv = {
-  maxWidth: '90%',
-  margin: 'auto',
-  paddingTop: '20px'
-}
+// const outerDiv = {
+//   maxWidth: '90%',
+//   margin: 'auto',
+//   paddingTop: '20px'
+// }
 
      /*   
 
@@ -20,22 +20,22 @@ const outerDiv = {
 
       */
 
-const newsTitle = {
-  textAlign: 'center'
-}
+// const newsTitle = {
+//   textAlign: 'center'
+// }
 
-const newsContainer = {
-  minWidth: '100%',
-  height: '165px',
-  margin: '30px 0'
-}
+// const newsContainer = {
+//   minWidth: '100%',
+//   height: '165px',
+//   margin: '30px 0'
+// }
 
-const imageResize = {
-  height: '75%',
-  width: 'auto',
-  float: 'left',
-  margin: '0 8px 8px 0'
-}
+// const imageResize = {
+//   height: '75%',
+//   width: 'auto',
+//   float: 'left',
+//   margin: '0 8px 8px 0'
+// }
 
 
 
