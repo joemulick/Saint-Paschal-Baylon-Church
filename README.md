@@ -28,7 +28,8 @@ This website serves as the general website for all things Saint Paschal Baylon r
 
 Required: 
 
- node.js v6.0.0+ (type "$ node --version" in your bash terminal to see if node is installed and to check the version)
+ node.js || v6.0.0+ type "$ node --version" in your bash terminal to see if node is installed and to check the version
+ mongodb || If you dont already have mongo db installed on your local machine you will need to install it as this appplication uses it: https://docs.mongodb.com/manual/installation/
 
 In node Terminal:
 
@@ -43,15 +44,20 @@ In node Terminal:
 	 > $ npm i
 
 
-In order for for this application to work you need to run two seperate servers; one for the backend (server) and one for the front end (react).
+In order for for this application to work you need to run three seperate servers (bash terminals) simultaneously; One for mongodb, one for the backend (server) and one for the front end (react).
 
-Go back one file directory and start the first server using:
+Once you have mongo db installed locally start it up with (you can start it up from any file directry it does not matter):
+
+	> $ mongod
+
+Go back one file directory and start the node.js server using:
 
 	> $ cd ..
+	
 
-	> $ PORT=3001 node bin/www
+	> $ PORT=3001 node bin/www (at this point you should be starting the backened server from the outer directory with app.js)
 
-Once the first server is running, open a new bash window inside saint-paschal-baylon-church/client (client directory):
+Once the node.js server is running, open a new bash window inside saint-paschal-baylon-church/client (client directory) and start the create-react-app server with:
 
 	> $ npm start
 
