@@ -36,7 +36,7 @@ In node Terminal:
 
 	 > $ cd saint-paschal-baylon-church
 
-	 > $ npm i (or npm install (same thing))
+	 > $ npm i
 
 	 > $ cd client
 
