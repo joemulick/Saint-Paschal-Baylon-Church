@@ -6,18 +6,16 @@ Web technologies used for this project:
 
 Node.js
 React.js
-
+<br />
 Express.js
 Mongo db
-
-react-bootstrap npm (Bootstrap for react)
-react-router npm
-
+<br />
+Bootstrap
+React-Router
+<br />
 Other notable node packages include:
 
-request npm
-&	
-cheeio npm (for web scraping) 
+request & cheeio (for web scraping) 
 
 ...
 
