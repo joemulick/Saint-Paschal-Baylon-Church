@@ -64,8 +64,10 @@ const sodBody = {
 }
 
 const sodImage = {
-	width: 'auto%',
-	maxHeight: '260px'
+	width: '100%',
+	height: 'auto',
+	borderRadius: '5px',
+	marginTop: '10px'
 }
 
 const stMid = {
@@ -87,8 +89,9 @@ const stLinkTube = {
 
 const stLeftInnerInner = {
 	display: 'inline-block',
-	marginTop: '20px',
-	minWidth: '50%'
+	maxWidth: '45%',
+	height: '100%',
+	verticalAlign: 'top'
 }
 
 const stLeftInnerInnerInner = {
@@ -102,9 +105,7 @@ const stLeftInnerInnerInnerMid = {
 const stRightInnerInner = {
 	display: 'inline-block',
 	maxWidth: '45%',
-	verticalAlign: 'top',
-	position: 'absolute',
-	right: '10%'
+	height: '100%'
 }
 
 const stBio = {

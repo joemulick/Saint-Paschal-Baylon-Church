@@ -24,6 +24,8 @@ const hrHome = {
 } 
 
 class Home extends Component {
+
+
   render() {
     return (
     	<div style={outerDiv}>

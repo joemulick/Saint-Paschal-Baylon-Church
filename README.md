@@ -22,7 +22,7 @@ Request & Cheeio (for web scraping)
 
 ...
 
-This website serves as the general website for all things Saint Paschal Baylon related. It features web scraping and a secured user authentication which allows an admin to login and edit upcoming events other tasks which they may need. 
+This website serves as the general website for all things Saint Paschal Baylon related. It features web scraping and a secured user authentication which allows an admin to login and edit upcoming events or other tasks which they may need. 
 
 # To run on your local machine
 
@@ -42,7 +42,6 @@ In node Terminal:
 
 	 > $ npm i
 
-	 
 
 In order for for this application to work you need to run two seperate servers; one for the backend (server) and one for the front end (react).
 
