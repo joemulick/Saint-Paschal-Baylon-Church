@@ -16,9 +16,9 @@ Bootstrap
 <br />
 React-Router
 <br />
-Other notable node packages include:
-
-Request & Cheeio (for web scraping) 
+Request & Cheeio (for web scraping)
+<br />
+<br />
 
 ...
 
