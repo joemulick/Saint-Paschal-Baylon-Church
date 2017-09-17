@@ -5,17 +5,20 @@ This will be new website for Saint Paschal Baylon Church.
 Web technologies used for this project:
 
 Node.js
+<br />
 React.js
 <br />
 Express.js
+<br />
 Mongo db
 <br />
 Bootstrap
+<br />
 React-Router
 <br />
 Other notable node packages include:
 
-request & cheeio (for web scraping) 
+Request & Cheeio (for web scraping) 
 
 ...
 
