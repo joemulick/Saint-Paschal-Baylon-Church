@@ -1,7 +1,11 @@
-// var request = require("request");
-// var cheerio = require("cheerio");
+var express = require('express');
+var router = express.Router();
+var request = require("request");
+var cheerio = require("cheerio");
 
-
+/* GET home page. */
+router.get("/scrape", function(req, res) {
+  
 // request("https://www.catholicnewsagency.com/headlines/", function(error, response, html) {
 //   // Load the HTML into cheerio and save it to a variable
 //   // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
@@ -74,6 +78,6 @@
 // });
 
 
+});
 
-
-// module.exports = scrape;
+module.exports = router;
