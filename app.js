@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
@@ -42,6 +43,13 @@ var app = express();
 app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'jade');
 
+// express session
+app.use(session({
+  secret: 'secret',
+  saveUninitialized: true,
+  resave: true
+}))
+// added 9 / 19 for secure login (possible this is not needed)
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
