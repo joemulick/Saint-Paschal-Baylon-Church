@@ -3,10 +3,10 @@ var Schema = mongoose.Schema;
 
 var newsModelSchema = new Schema({
 
-    title: { type: String, unique: true },
-    image: { type: String, unique: true },
-    link: { type: String, unique: true },
-    text: { type: String, unique: true }
+    everything: { type: String, unique: true }
+    // image: { type: String, unique: true },
+    // link: { type: String, unique: true },
+    // text: { type: String, unique: true }
 
 });
 
