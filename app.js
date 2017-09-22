@@ -91,6 +91,23 @@ request("https://www.catholicnewsagency.com/headlines/", function(error, respons
 
     });
 
+        db.scrapedData.save({
+          title: title,
+          link: link
+        },
+        function(error, saved) {
+          // If there's an error during this query
+          if (error) {
+            // Log the error
+            console.log(error);
+          }
+          // Otherwise,
+          else {
+            // Log the saved data
+            console.log(saved);
+          }
+        });
+
     var article = new Article({
         body: req.body.body
     });

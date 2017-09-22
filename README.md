@@ -1,6 +1,6 @@
 # New website for Saint Paschal Baylon Church
 
-This will be new website for Saint Paschal Baylon Church.
+This will be a new website for Saint Paschal Baylon Church.
 
 Web technologies used for this project:
 
@@ -29,6 +29,9 @@ This website serves as the general website for all things Saint Paschal Baylon r
 Required: 
 
  node.js || v6.0.0+ type "$ node --version" in your bash terminal to see if node is installed and to check the version
+
+<br />
+ 
  mongodb || If you dont already have mongo db installed on your local machine you will need to install it as this appplication uses it: https://docs.mongodb.com/manual/installation/
 
 In node Terminal:
