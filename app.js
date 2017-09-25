@@ -8,7 +8,7 @@ var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var request = require("request");
 var cheerio = require("cheerio");
-var Article = require('.models/newsModel.js')
+var Article = require('./models/newsModel.js');
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
@@ -67,7 +67,7 @@ app.use('/users', users);
 
 
 //////////////    SCRAPING STUFf    ///////////////////
-app.get("/scrape", function(req, res) {
+
 request("https://www.catholicnewsagency.com/headlines/", function(error, response, html) {
   // Load the HTML into cheerio and save it to a variable
   // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
@@ -91,26 +91,7 @@ request("https://www.catholicnewsagency.com/headlines/", function(error, respons
 
     });
 
-        db.scrapedData.save({
-          title: title,
-          link: link
-        },
-        function(error, saved) {
-          // If there's an error during this query
-          if (error) {
-            // Log the error
-            console.log(error);
-          }
-          // Otherwise,
-          else {
-            // Log the saved data
-            console.log(saved);
-          }
-        });
-
-    var article = new Article({
-        body: req.body.body
-    });
+    var article = new Article(resultEverything);
 
   console.log("Everything: " + resultEverything);
   /////// Scrape Everything End /////////
@@ -162,10 +143,6 @@ request("https://www.catholicnewsagency.com/headlines/", function(error, respons
 
   console.log("Summary text: " + JSON.stringify(resultText[3]) + " " + JSON.stringify(resultText[3]));
   /////// Scrapes Summary Text /////////
-});
-
-res.send('scrape complete');
-
 });
 
 /////////  SCRAPE END    //////////////
