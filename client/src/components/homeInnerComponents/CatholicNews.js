@@ -44,10 +44,12 @@ class Events extends Component {
   state = {scrape: []}
 
   componentDidMount() {
-    fetch('/scrape')
+    fetch('/articles')
       .then(res => res.json())
       .then(scrape => this.setState({ scrape }));
   }
+
+
 
   render() {
     return (
@@ -55,7 +57,7 @@ class Events extends Component {
         <div>
         <h1>Users</h1>
         {this.state.scrape.map(data =>
-          <div key={data.id}>{data}</div>
+          <div key={data.id}>{data.text}</div>
         )}
         </div>
     );

@@ -61,7 +61,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', index);
+// app.use('/news', index);
 // app.use('/users', users);
 
 
@@ -98,6 +98,18 @@ request("https://www.catholicculture.org/news/week.cfm", function(error, respons
 });
 
 /////////  SCRAPE END    //////////////
+
+app.get("/articles", function(req, res) {
+  Article.find({}, function(err, found){
+    if (err){
+      console.log(err);
+    } else {
+      console.log(found);
+      res.json(found);
+    }
+  });
+
+});
 
 
 // catch 404 and forward to error handler
