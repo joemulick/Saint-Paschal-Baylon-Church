@@ -3,7 +3,7 @@ import Welcome from './homeInnerComponents/Welcome.js';
 import MassTimes from './homeInnerComponents/MassTimes.js';
 import Events from './homeInnerComponents/Events.js';
 import SaintOfDay from './homeInnerComponents/SaintOfDay.js'
-import CatholicNews from './homeInnerComponents/CatholicNews.js'
+import CatholicNewsComponent from './homeInnerComponents/CatholicNewsComponent.js'
 // import { LinkContainer } from 'react-router-bootstrap';
 // import {
 //   BrowserRouter as Router,
@@ -49,7 +49,7 @@ class Home extends Component {
       		<Col xs={12} md={4}>
           
             <SaintOfDay />
-      			<CatholicNews />
+      			<CatholicNewsComponent />
 
 				</Col>
 

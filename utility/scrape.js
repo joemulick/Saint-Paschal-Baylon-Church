@@ -83,9 +83,7 @@ request("https://www.catholicnewsagency.com/headlines/", function(error, respons
   /////// Scrapes Summary Text /////////
 });
 
-var article = new Article({
-        body: req.body.body
-    });
+
 
 });
 
