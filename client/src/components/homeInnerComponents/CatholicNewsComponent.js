@@ -49,9 +49,14 @@ const buttonDiv = {
 class Events extends Component {
 
   constructor(props) {
+    
     super(props)
     this.state = {option: 'news'}
+
+    this.handleClick = this.handleClick.bind(this)
   }
+
+
 
   handleClick(event) {
 
@@ -60,6 +65,8 @@ class Events extends Component {
     this.setState({
       option: event.target.getAttribute('data-value')
     });
+
+    console.log(this.state.option)
   }
 
 
