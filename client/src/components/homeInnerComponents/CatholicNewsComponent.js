@@ -1,62 +1,44 @@
 import React, { Component } from 'react'
 // import { LinkContainer } from 'react-router-bootstrap'
 import { ButtonGroup, Button } from 'react-bootstrap'
+import CatholicNewsLowerInnerContainer from './catholicNewsInnerComponents/catholicNewsInnerLowerComponent.js'
 
 
 const buttonDiv = {
   marginTop: '65px'
 }
-
-
-        /*
-
-          const outerDiv = {
-            maxWidth: '90%',
-            margin: 'auto',
-            paddingTop: '20px'
-          }
-
-          const newsTitle = {
-            textAlign: 'center'
-          }
-
-          const newsContainer = {
-            minWidth: '100%',
-            margin: '30px 0'
-          }
-
-          state = {scrape: []}
-
-          componentDidMount() {
-            fetch('/articles')
-              .then(res => res.json())
-              .then(scrape => this.setState({ scrape }));
-          }
-
-        <div style={outerDiv}>
-          <h4 style={newsTitle}>Catholic News</h4>
-          {this.state.scrape.map(data =>
-          <a href={data.link} target="blank">
-          <div style={newsContainer} key={data.id}>
-            <p>{data.text}</p>
-          </div>
-          </a>
-          )}
-        </div>
-
-        */
+    
 
 class Events extends Component {
 
   constructor(props) {
-    
+
     super(props)
     this.state = {option: 'news'}
 
     this.handleClick = this.handleClick.bind(this)
+
   }
 
+  componentDidMount() {
 
+    if(this.state.option == "news"){
+
+    fetch('/articles')
+      .then(res => res.json())
+      .then(scrape => this.setState({ scrape }));
+
+    }
+
+    if(this.state.option == "prayer"){
+
+    fetch('/articles')
+      .then(res => res.json())
+      .then(scrape => this.setState({ scrape }));
+
+    }
+  }
+    
 
   handleClick(event) {
 
@@ -80,6 +62,7 @@ class Events extends Component {
           </ButtonGroup>
         </div>
         <div>
+          <CatholicNewsLowerInnerContainer data={this.state.option} />
         </div>
       </div>
     );
