@@ -9,6 +9,21 @@ const catholicPrayers = {
   'act-of-love' : 'O Lord God, I love you above all things and I love my neighbor for your sake because you are the highest, infinite and perfect good, worthy of all my love. In this love I intend to live and die. Amen.'
 }
 
+const outerDiv = {
+  maxWidth: '90%',
+  margin: 'auto',
+  paddingTop: '20px'
+}
+
+const newsTitle = {
+  textAlign: 'center'
+}
+
+const newsContainer = {
+  minWidth: '100%',
+  margin: '30px 0'
+}
+
 
  /*
 
@@ -66,9 +81,9 @@ class EventsInner extends Component {
 
   render() {
     return (
-      <div>
-        <p>From CatholicNewsInnerLowerComponent</p>
-      </div>
+    	<div>
+    		<p>From Inside CatholicNewsInnerLowerComponent</p>
+    	</div>
     );
   }
 }
