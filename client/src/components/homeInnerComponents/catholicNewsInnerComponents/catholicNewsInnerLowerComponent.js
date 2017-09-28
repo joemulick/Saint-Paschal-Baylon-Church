@@ -15,9 +15,6 @@ const outerDiv = {
   paddingTop: '20px'
 }
 
-const newsTitle = {
-  textAlign: 'center'
-}
 
 const newsContainer = {
   minWidth: '100%',
@@ -66,24 +63,41 @@ const newsContainer = {
 
 class EventsInner extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {scrape: []};
+  }
+
   componentDidMount() {
+  	console.log('this.props.option OUTside if inside CompDidMount: ' + this.props.option)
 
-  		if(this.props.option == 'news'){
-            fetch('/articles')
-              .then(res => res.json())
-              .then(scrape => this.setState({ scrape }));
-          }
+  	if(this.props.option == "news"){
 
-        // if(this.props.option == 'prayer'){
-            
-        //   }  
+  	console.log('this.props.option INside if inside CompDidMount: ' + this.props.option)
+
+    fetch('/articles')
+      .then(res => res.json())
+      .then(scrape => this.setState({ scrape }));
+
+    }
+
+    if(this.props.option === "prayer"){
+    }
+  
   }
 
   render() {
     return (
-    	<div>
-    		<p>From Inside CatholicNewsInnerLowerComponent</p>
-    	</div>
+    	<div style={outerDiv}> 
+    	  <p> TEST FROM INSIDE INNER LOWER COMPONENT </p>
+          {this.state.scrape.map(data =>
+          <a href={data.link} target="blank">
+          <div style={newsContainer} key={data.id}>
+            <p>{data.text}</p>
+          </div>
+          </a>
+          )}
+        </div>
     );
   }
 }

@@ -20,25 +20,9 @@ class Events extends Component {
 
   }
 
-  componentDidMount() {
-
-    if(this.state.option == "news"){
-
-    fetch('/articles')
-      .then(res => res.json())
-      .then(scrape => this.setState({ scrape }));
-
-    }
-
-    if(this.state.option == "prayer"){
-
-    fetch('/articles')
-      .then(res => res.json())
-      .then(scrape => this.setState({ scrape }));
-
-    }
-  }
-    
+  // componentDidMount() {
+  //   console.log("This is what this.state looks like from component did mount in catholic news outer componenet: " + this.state.option)
+  // }
 
   handleClick(event) {
 
@@ -62,7 +46,7 @@ class Events extends Component {
           </ButtonGroup>
         </div>
         <div>
-          <CatholicNewsLowerInnerContainer data={this.state.option} />
+          <CatholicNewsLowerInnerContainer option={this.state.option} />
         </div>
       </div>
     );
