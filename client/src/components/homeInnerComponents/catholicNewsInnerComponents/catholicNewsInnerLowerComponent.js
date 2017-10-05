@@ -22,44 +22,6 @@ const newsContainer = {
 }
 
 
- /*
-
-          const outerDiv = {
-            maxWidth: '90%',
-            margin: 'auto',
-            paddingTop: '20px'
-          }
-
-          const newsTitle = {
-            textAlign: 'center'
-          }
-
-          const newsContainer = {
-            minWidth: '100%',
-            margin: '30px 0'
-          }
-
-          state = {scrape: []}
-
-          componentDidMount() {
-            fetch('/articles')
-              .then(res => res.json())
-              .then(scrape => this.setState({ scrape }));
-          }
-
-        <div style={outerDiv}>
-          <h4 style={newsTitle}>Catholic News</h4>
-          {this.state.scrape.map(data =>
-          <a href={data.link} target="blank">
-          <div style={newsContainer} key={data.id}>
-            <p>{data.text}</p>
-          </div>
-          </a>
-          )}
-        </div>
-
-        */
-
 
 class EventsInner extends Component {
 
@@ -69,22 +31,21 @@ class EventsInner extends Component {
   }
 
   componentDidMount() {
-  	console.log('this.props.option OUTside if inside CompDidMount: ' + this.props.option)
-
-  	if(this.props.option == "news"){
-
+  	
   	console.log('this.props.option INside if inside CompDidMount: ' + this.props.option)
 
     fetch('/articles')
       .then(res => res.json())
       .then(scrape => this.setState({ scrape }));
 
-    }
-
-    if(this.props.option === "prayer"){
-    }
-  
   }
+
+componentWillReceiveProps(nextProps){
+  this.setState({
+    scrape : nextProps
+  })
+}
+  
 
   render() {
     return (
@@ -92,11 +53,12 @@ class EventsInner extends Component {
     	  <p> TEST FROM INSIDE INNER LOWER COMPONENT </p>
           {this.state.scrape.map(data =>
           <a href={data.link} target="blank">
-          <div style={newsContainer} key={data.id}>
+          <div style={newsContainer} key={data._id}>
             <p>{data.text}</p>
           </div>
           </a>
           )}
+
         </div>
     );
   }

@@ -8,6 +8,8 @@ var mongoose = require('mongoose');
 var request = require("request");
 var cheerio = require("cheerio");
 var Article = require('./models/newsModel.js');
+var cors = require('cors');
+
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
@@ -34,24 +36,12 @@ db.once("open", function() {
 /* ************* */
 /* ************* */
 
-
-// var index = require('./routes/index');
-// var users = require('./routes/users');
-
-
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'jade');
 
-// express session
-// app.use(session({
-//   secret: 'secret',
-//   saveUninitialized: true,
-//   resave: true
-// }))
-// added 9 / 19 for secure login (possible this is not needed)
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -60,9 +50,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-// app.use('/news', index);
-// app.use('/users', users);
 
 
 //////////////    SCRAPING STUFf    ///////////////////
@@ -119,6 +106,12 @@ app.get("/articles", function(req, res) {
   });
 
 });
+
+//////////////////////////////////////
+
+// app.get('/admin-login', authCheck, (req,res) => {
+//   res.sendFile(path.join(__dirname, "adminlogin.html"));
+// })
 
 
 // catch 404 and forward to error handler
