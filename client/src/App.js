@@ -3,6 +3,7 @@ import Home from './components/Home.js'
 import BecomeCatholic from './components/BecomeCatholic.js'
 import GetInvolved from './components/GetInvolved.js'
 import ContactUs from './components/ContactUs.js'
+import AdminLogin from '/components/AdminLogin.js'
 import { LinkContainer } from 'react-router-bootstrap'
 import {
   BrowserRouter as Router,
@@ -27,8 +28,8 @@ const contactUsButton = {
 
 class App extends Component {
 
-
   render() {
+    
     return (
       <Router>
         <Grid>
@@ -65,7 +66,7 @@ class App extends Component {
                     <MenuItem eventKey={3.1}>Adoration Chapel</MenuItem>
                     <MenuItem eventKey={3.2}>Confession</MenuItem>
                     <MenuItem eventKey={3.3}>Crying Room</MenuItem>
-                  </NavDropdown>
+                </NavDropdown>
                 </Nav>
 
                 <Nav pullRight style={contactUsButton}>
@@ -84,7 +85,7 @@ class App extends Component {
             <Route path="/becoming-catholic" component={BecomeCatholic}/>
             <Route path="/get-involved" component={GetInvolved}/>
             <Route path="/contact-us" component={ContactUs}/>
-
+            <PrivateRoute path="admin-login" component={AdminLogin}/>
             </Grid>
       </Router>
     );
